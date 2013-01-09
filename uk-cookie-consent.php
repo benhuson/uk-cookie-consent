@@ -131,61 +131,20 @@ function catapult_cookie_options_validate($input) {
 	return $options;
 }
 
-//Enqueue jquery
+// Enqueue jquery and styles if the cookie is not set
 function catapult_cookie_jquery() {
     wp_enqueue_script( 'jquery' );
+	$url_path = plugins_url( str_replace( basename( __FILE__ ), '', plugin_basename( __FILE__ ) ) );
+	if ( ! isset( $_COOKIE['catAccCookies'] ) ) {
+		wp_enqueue_style( 'catapult_cookie_css', $url_path . 'css/uk-cookie-consent.css', '', '', 'screen' );
+	}
 }     
 add_action('wp_enqueue_scripts', 'catapult_cookie_jquery');
 
 //Add CSS and JS if the cookie is not set
 function catapult_add_cookie_css() {
 	if ( !isset ( $_COOKIE["catAccCookies"] ) ) {
-		echo '<style type="text/css" media="screen">
-			html { margin-top: 32px; }
-			* html body { margin-top: 32px; }
-		#catapult-cookie-bar {
-			direction: ltr;
-			color: #DDD;
-			font: normal 13px/28px sans-serif;
-			height: 30px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			min-width: 600px;
-			z-index: 99999;
-			padding:2px 20px 0;
-			background-color: #464646;
-			background-image: -ms-linear-gradient(bottom, #373737, #464646 5px);
-			background-image: -moz-linear-gradient(bottom, #373737, #464646 5px);
-			background-image: -o-linear-gradient(bottom, #373737, #464646 5px);
-			background-image: -webkit-gradient(linear,left bottom,left top,from( #373737),to(#464646));
-			background-image: -webkit-linear-gradient(bottom, #373737, #464646 5px);
-			background-image: linear-gradient(bottom, #373737, #464646 5px);
-			text-align:left;
-		}
-		#catapult-cookie-bar a {
-			color:#fff;
-		}
-		button#catapultCookie {
-			margin:0 20px;
-			line-height:20px;
-			background:#45AE52;
-			border:none;
-			color:#fff;
-			padding:0 12px;
-			border-radius: 3px;
-			cursor: pointer;
-			font-size: 13px;
-			font-weight: bold;
-			font-family: sans-serif;
-			text-shadow: #555 1px 1px;
-		}
-		button#catapultCookie:hover {
-			background:#5EC544;
-		}
-		</style>
-		<script type="text/javascript">
+		echo '<script type="text/javascript">
 			function catapultAcceptCookies() {
 				days = 30;
 				var date = new Date();
