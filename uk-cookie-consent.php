@@ -8,11 +8,6 @@ Version: 1.31
 Author URI: http://catapultdesign.co.uk/
 */
 
-$options = get_option('catapult_cookie_options');
-
-$wp_content_url = get_option( 'siteurl' ) . '/wp-content';
-$wp_plugin_url = plugins_url() . '/catapult-cookie-consent';
-
 //Add an option page for the settings
 add_action('admin_menu', 'catapult_cookie_plugin_menu');
 function catapult_cookie_plugin_menu() {
