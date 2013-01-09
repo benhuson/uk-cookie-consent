@@ -131,33 +131,15 @@ function catapult_cookie_options_validate($input) {
 	return $options;
 }
 
-// Enqueue jquery and styles if the cookie is not set
+// Enqueue scripts and styles if the cookie is not set
 function catapult_cookie_jquery() {
-    wp_enqueue_script( 'jquery' );
 	$url_path = plugins_url( str_replace( basename( __FILE__ ), '', plugin_basename( __FILE__ ) ) );
 	if ( ! isset( $_COOKIE['catAccCookies'] ) ) {
 		wp_enqueue_style( 'catapult_cookie_css', $url_path . 'css/uk-cookie-consent.css', '', '', 'screen' );
+		wp_enqueue_script( 'catapult_cookie_js', $url_path . 'js/uk-cookie-consent.js', array( 'jquery' ) );
 	}
 }     
 add_action('wp_enqueue_scripts', 'catapult_cookie_jquery');
-
-//Add CSS and JS if the cookie is not set
-function catapult_add_cookie_css() {
-	if ( !isset ( $_COOKIE["catAccCookies"] ) ) {
-		echo '<script type="text/javascript">
-			function catapultAcceptCookies() {
-				days = 30;
-				var date = new Date();
-				date.setTime(date.getTime()+(days*24*60*60*1000));
-				var expires = "; expires="+date.toGMTString();
-				document.cookie = "catAccCookies=true"+expires+"; path=/";
-				jQuery("#catapult-cookie-bar").hide();
-				jQuery("html").css("margin-top","0");
-			}		
-		</script>';
-	}
-}
-add_action ( 'wp_head', 'catapult_add_cookie_css' );
 
 //Add the notification bar if the cookie is not set
 function catapult_add_cookie_bar() {
