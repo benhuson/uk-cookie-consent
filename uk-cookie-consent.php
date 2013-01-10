@@ -168,7 +168,8 @@ function catapult_add_cookie_bar() {
 		} else {
 			$link_text = "cookie-policy";
 		}
-		echo '<div id="catapult-cookie-bar">' . htmlspecialchars ( $current_text ) . '<button id="catapultCookie" onclick="catapultAcceptCookies()">' . htmlspecialchars ( $accept_text ) . '</button><a href="' . get_bloginfo ( 'url' ) . '/' . $link_text . '/">' . htmlspecialchars ( $more_text ) . '</a></div>';
+		$content = sprintf( '<div id="catapult-cookie-bar">%s<button id="catapultCookie" onclick="catapultAcceptCookies();">%s</button><a href="%s">%s</a></div>', htmlspecialchars( $current_text ), htmlspecialchars( $accept_text ), home_url( $link_text ), htmlspecialchars( $more_text ) );
+		echo apply_filters( 'catapult_cookie_content', $content, $options );
 	}
 }
 add_action ( 'wp_footer', 'catapult_add_cookie_bar', 1000 );
