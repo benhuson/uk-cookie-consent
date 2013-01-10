@@ -8,61 +8,64 @@ Version: 1.31
 Author URI: http://catapultdesign.co.uk/
 */
 
+// Language
+load_plugin_textdomain( 'uk-cookie-consent', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 //Add an option page for the settings
 add_action('admin_menu', 'catapult_cookie_plugin_menu');
 function catapult_cookie_plugin_menu() {
-	add_options_page('Cookie Consent', 'Cookie Consent', 'manage_options', 'catapult_cookie_consent', 'catapult_cookie_options_page');
+	add_options_page( __( 'Cookie Consent', 'uk-cookie-consent' ), __( 'Cookie Consent', 'uk-cookie-consent' ), 'manage_options', 'catapult_cookie_consent', 'catapult_cookie_options_page' );
 }
 
 function catapult_cookie_options_page() { ?>
 	<div class="wrap">
-		<h2>UK Cookie Consent</h2>
+		<h2><?php _e( 'UK Cookie Consent', 'uk-cookie-consent' ); ?></h2>
 		<div id="poststuff" class="metabox-holder has-right-sidebar">
 			<div class="meta-box-sortabless">
 				<div class="postbox">
-					<h3 class="hndle">Your settings</h3>
+					<h3 class="hndle"><?php _e( 'Your settings', 'uk-cookie-consent' ); ?></h3>
 					<div class="inside">
 						<?php //Check to see if the info page has been created
 						$options = get_option('catapult_cookie_options');
-						$pagename = 'Cookie Policy';
+						$pagename = __( 'Cookie Policy', 'uk-cookie-consent' );
 						$cpage = get_page_by_title ( $pagename );
 						if ( !$cpage ) {
 							global $user_ID;
 							$page['post_type']    = 'page';
-							$page['post_content'] = '<p>This site uses cookies - small text files that are placed on your machine to help the site provide a better user experience. In general, cookies are used to retain user preferences, store information for things like shopping carts, and provide anonymised tracking data to third party applications like Google Analytics.</p>
-							<p>As a rule, cookies will make your browsing experience better. However, you may prefer to disable cookies on this site and on others. The most effective way to do this is to disable cookies in your browser. We suggest consulting the Help section of your browser or taking a look at <a href="http://www.aboutcookies.org">the About Cookies website</a> which offers guidance for all modern browsers.</p>';
+							$page['post_content'] = '<p>' . __( 'This site uses cookies - small text files that are placed on your machine to help the site provide a better user experience. In general, cookies are used to retain user preferences, store information for things like shopping carts, and provide anonymised tracking data to third party applications like Google Analytics.', 'uk-cookie-consent' ) . '</p>
+								<p>' . __( 'As a rule, cookies will make your browsing experience better. However, you may prefer to disable cookies on this site and on others. The most effective way to do this is to disable cookies in your browser. We suggest consulting the Help section of your browser or taking a look at <a href="http://www.aboutcookies.org">the About Cookies website</a> which offers guidance for all modern browsers.', 'uk-cookie-consent' ) . '</p>';
 							$page['post_parent']  = 0;
 							$page['post_author']  = $user_ID;
 							$page['post_status']  = 'publish';
 							$page['post_title']   = $pagename;
 							$pageid = wp_insert_post ( $page );
 							if ( $pageid == 0 ) {
-								echo '<div class="updated settings-error">Failed to create page.</div>';
+								echo '<div class="updated settings-error">' . __( 'Failed to create page.', 'uk-cookie-consent' ) . '</div>';
 							} else {
-								echo '<div class="updated">Cookie Policy page successfully created.</div>';
+								echo '<div class="updated">' . __( 'Cookie Policy page successfully created.', 'uk-cookie-consent' ) . '</div>';
 							}
 						} ?>
 						<form action="options.php" method="post">				
 							<?php settings_fields('catapult_cookie_options'); ?>
 							<?php do_settings_sections('catapult_cookie'); ?>
-							<input name="cat_submit" type="submit" id="submit" class="button-primary" style="margin-top:30px;" value="<?php esc_attr_e('Save Changes'); ?>" />
+							<input name="cat_submit" type="submit" id="submit" class="button-primary" style="margin-top:30px;" value="<?php esc_attr_e( __( 'Save Changes', 'uk-cookie-consent' ) ); ?>" />
 							<?php $options = get_option('catapult_cookie_options');
 							$value = htmlentities ( $options['catapult_cookie_link_settings'], ENT_QUOTES );
 							if ( !$value ) {
 								$value = 'cookie-policy';
 							} ?>
-							<p>Your Cookies Policy page is <a href="<?php bloginfo ( 'url' ); ?>/<?php echo $value; ?>/">here</a>. You may wish to create a menu item or other link on your site to this page.</p>
+							<p><?php echo sprintf( __( 'Your Cookies Policy page is <a href="%s">here</a>. You may wish to create a menu item or other link on your site to this page.', 'uk-cookie-consent' ), home_url( $value ) ); ?></p>
 						</form>
 					</div>
 				</div>
 			</div>
 			<div class="meta-box-sortabless ui-sortable" style="position:relative;">
 					<div class="postbox">
-						<h3 class="hndle">Resources</h3>
+						<h3 class="hndle"><?php _e( 'Resources', 'uk-cookie-consent' ); ?></h3>
 						<div class="inside">
-							<p><a href="http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx">Information Commissioner's Office Guidance on Cookies</a></p>
+							<p><a href="http://www.ico.gov.uk/for_organisations/privacy_and_electronic_communications/the_guide/cookies.aspx"><?php _e( 'Information Commissioner\'s Office Guidance on Cookies', 'uk-cookie-consent' ); ?></a></p>
 							<p><a href="http://www.aboutcookies.org/default.aspx">AboutCookies.org</a></p>
-							<p><a href="http://catapultdesign.co.uk/uk-cookie-consent/">Our interpretation of the guidance</a></p>
+							<p><a href="http://catapultdesign.co.uk/uk-cookie-consent/"><?php _e( 'Our interpretation of the guidance', 'uk-cookie-consent' ); ?></a></p>
 						</div>
 					</div>
 				</div>
@@ -74,21 +77,26 @@ add_action('admin_init', 'catapult_cookie_admin_init');
 function catapult_cookie_admin_init(){
 	register_setting( 'catapult_cookie_options', 'catapult_cookie_options', 'catapult_cookie_options_validate' );
 	add_settings_section('catapult_cookie_main', '', 'catapult_cookie_section_text', 'catapult_cookie', 'catapult_cookie_main' );
-	add_settings_field('catapult_cookie_text', 'Notification text', 'catapult_cookie_text_settings', 'catapult_cookie', 'catapult_cookie_main' );
-	add_settings_field('catapult_cookie_accept', 'Accept text', 'catapult_cookie_accept_settings', 'catapult_cookie', 'catapult_cookie_main' );
-	add_settings_field('catapult_cookie_more', 'More info text', 'catapult_cookie_more_settings', 'catapult_cookie', 'catapult_cookie_main' );
-	add_settings_field('catapult_cookie_link', 'Info page permalink', 'catapult_cookie_link_settings', 'catapult_cookie', 'catapult_cookie_main' );
+	add_settings_field('catapult_cookie_text', __( 'Notification text', 'uk-cookie-consent' ), 'catapult_cookie_text_settings', 'catapult_cookie', 'catapult_cookie_main' );
+	add_settings_field('catapult_cookie_accept', __( 'Accept text', 'uk-cookie-consent' ), 'catapult_cookie_accept_settings', 'catapult_cookie', 'catapult_cookie_main' );
+	add_settings_field('catapult_cookie_more', __( 'More info text', 'uk-cookie-consent' ), 'catapult_cookie_more_settings', 'catapult_cookie', 'catapult_cookie_main' );
+	add_settings_field('catapult_cookie_link', __( 'Info page permalink', 'uk-cookie-consent' ), 'catapult_cookie_link_settings', 'catapult_cookie', 'catapult_cookie_main' );
 }
 
 function catapult_cookie_section_text() {
-	echo '<p>You can just use these settings as they are or update the text as you wish. We recommend keeping it brief.</p><p>The plug-in automatically creates a page called "Cookie Policy" and sets the default More Info link to yoursitename.com/cookie-policy.</p><p>If you find the page hasn\'t been created, hit the Save Changes button on this page.</p><p>If you would like to change the permalink, just update the Info page permalink setting, e.g. enter "?page_id=4" if you are using the default permalink settings (and 4 is the id of your new Cookie Policy page).</p><p>For any support queries, please post on the <a href="http://wordpress.org/extend/plugins/uk-cookie-consent/">WordPress forum</a>.</p><p><strong>And if this plug-in has been helpful to you, then <a href="http://wordpress.org/extend/plugins/uk-cookie-consent/">please rate it</a>.</strong></p>';
+	echo '<p>' . __( 'You can just use these settings as they are or update the text as you wish. We recommend keeping it brief.', 'uk-cookie-consent' ) . '</p>
+		<p>' . __( 'The plug-in automatically creates a page called "Cookie Policy" and sets the default More Info link to yoursitename.com/cookie-policy.', 'uk-cookie-consent' ) . '</p>
+		<p>' . __( 'If you find the page hasn\'t been created, hit the Save Changes button on this page.', 'uk-cookie-consent' ) . '</p>
+		<p>' . __( 'If you would like to change the permalink, just update the Info page permalink setting, e.g. enter "?page_id=4" if you are using the default permalink settings (and 4 is the id of your new Cookie Policy page).', 'uk-cookie-consent' ) . '</p>
+		<p>' . sprintf( __( 'For any support queries, please post on the <a href="%s">WordPress forum</a>.', 'uk-cookie-consent' ), 'http://wordpress.org/extend/plugins/uk-cookie-consent/' ) . '</p>
+		<p><strong>' . sprintf( __( 'And if this plug-in has been helpful to you, then <a href="%s">please rate it</a>.', 'uk-cookie-consent' ), 'http://wordpress.org/extend/plugins/uk-cookie-consent/' ) . '</strong></p>';
 }
 
 function catapult_cookie_text_settings() {
 	$options = get_option( 'catapult_cookie_options' );
 	$value = htmlentities ( $options['catapult_cookie_text_settings'], ENT_QUOTES );
 	if ( !$value ) {
-		$value = 'This site uses cookies';
+		$value = __( 'This site uses cookies', 'uk-cookie-consent' );
 	}
 	echo "<input id='catapult_cookie_text_settings' name='catapult_cookie_options[catapult_cookie_text_settings]' size='50' type='text' value='{$value}' />";
 }
@@ -96,7 +104,7 @@ function catapult_cookie_accept_settings() {
 	$options = get_option('catapult_cookie_options');
 	$value = htmlentities ( $options['catapult_cookie_accept_settings'], ENT_QUOTES );
 	if ( !$value ) {
-		$value = 'No problem';
+		$value = __( 'No problem', 'uk-cookie-consent' );
 	}
 	echo "<input id='catapult_cookie_accept_settings' name='catapult_cookie_options[catapult_cookie_accept_settings]' size='50' type='text' value='{$value}' />";
 }
@@ -104,7 +112,7 @@ function catapult_cookie_more_settings() {
 	$options = get_option('catapult_cookie_options');
 	$value = htmlentities ( $options['catapult_cookie_more_settings'], ENT_QUOTES );
 	if ( !$value ) {
-		$value = 'More info';
+		$value = __( 'More info', 'uk-cookie-consent' );
 	}
 	echo "<input id='catapult_cookie_more_settings' name='catapult_cookie_options[catapult_cookie_more_settings]' size='50' type='text' value='{$value}' />";
 }
@@ -112,7 +120,7 @@ function catapult_cookie_link_settings() {
 	$options = get_option('catapult_cookie_options');
 	$value = htmlentities ( $options['catapult_cookie_link_settings'], ENT_QUOTES );
 	if ( !$value ) {
-		$value = 'cookie-policy';
+		$value = __( 'cookie-policy', 'uk-cookie-consent' );
 	}
 	echo "<input id='catapult_cookie_link_settings' name='catapult_cookie_options[catapult_cookie_link_settings]' size='50' type='text' value='{$value}' />";
 }
@@ -143,17 +151,17 @@ function catapult_add_cookie_bar() {
 		if ( $options['catapult_cookie_text_settings'] ) {
 			$current_text = $options['catapult_cookie_text_settings'];
 		} else {
-			$current_text = "This site uses cookies";
+			$current_text = __( 'This site uses cookies', 'uk-cookie-consent' );
 		}
 		if ( $options['catapult_cookie_accept_settings'] ) {
 			$accept_text = $options['catapult_cookie_accept_settings'];
 		} else {
-			$accept_text = "Okay, thanks";
+			$accept_text = __( 'Okay, thanks', 'uk-cookie-consent' );
 		}
 		if ( $options['catapult_cookie_more_settings'] ) {
 			$more_text = $options['catapult_cookie_more_settings'];
 		} else {
-			$more_text = "Find out more";
+			$more_text = __( 'Find out more', 'uk-cookie-consent' );
 		}
 		if ( $options['catapult_cookie_link_settings'] ) {
 			$link_text = strtolower ( $options['catapult_cookie_link_settings'] );
