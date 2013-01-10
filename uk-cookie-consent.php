@@ -94,35 +94,35 @@ function catapult_cookie_section_text() {
 
 function catapult_cookie_text_settings() {
 	$options = get_option( 'catapult_cookie_options' );
-	$value = htmlentities ( $options['catapult_cookie_text_settings'], ENT_QUOTES );
+	$value = $options['catapult_cookie_text_settings'];
 	if ( !$value ) {
 		$value = __( 'This site uses cookies', 'uk-cookie-consent' );
 	}
-	echo "<input id='catapult_cookie_text_settings' name='catapult_cookie_options[catapult_cookie_text_settings]' size='50' type='text' value='{$value}' />";
+	echo '<input id="catapult_cookie_text_settings" name="catapult_cookie_options[catapult_cookie_text_settings]" size="50" type="text" value="' . esc_attr( $value ) . '" />';
 }
 function catapult_cookie_accept_settings() {
 	$options = get_option('catapult_cookie_options');
-	$value = htmlentities ( $options['catapult_cookie_accept_settings'], ENT_QUOTES );
+	$value = $options['catapult_cookie_accept_settings'];
 	if ( !$value ) {
 		$value = __( 'No problem', 'uk-cookie-consent' );
 	}
-	echo "<input id='catapult_cookie_accept_settings' name='catapult_cookie_options[catapult_cookie_accept_settings]' size='50' type='text' value='{$value}' />";
+	echo '<input id="catapult_cookie_accept_settings" name="catapult_cookie_options[catapult_cookie_accept_settings]" size="50" type="text" value="' . esc_attr( $value ) . '" />';
 }
 function catapult_cookie_more_settings() {
 	$options = get_option('catapult_cookie_options');
-	$value = htmlentities ( $options['catapult_cookie_more_settings'], ENT_QUOTES );
+	$value = $options['catapult_cookie_more_settings'];
 	if ( !$value ) {
 		$value = __( 'More info', 'uk-cookie-consent' );
 	}
-	echo "<input id='catapult_cookie_more_settings' name='catapult_cookie_options[catapult_cookie_more_settings]' size='50' type='text' value='{$value}' />";
+	echo '<input id="catapult_cookie_more_settings" name="catapult_cookie_options[catapult_cookie_more_settings]" size="50" type="text" value="' . esc_attr( $value ) . '" />';
 }
 function catapult_cookie_link_settings() {
 	$options = get_option('catapult_cookie_options');
-	$value = htmlentities ( $options['catapult_cookie_link_settings'], ENT_QUOTES );
+	$value = $options['catapult_cookie_link_settings'];
 	if ( !$value ) {
 		$value = __( 'cookie-policy', 'uk-cookie-consent' );
 	}
-	echo "<input id='catapult_cookie_link_settings' name='catapult_cookie_options[catapult_cookie_link_settings]' size='50' type='text' value='{$value}' />";
+	echo '<input id="catapult_cookie_link_settings" name="catapult_cookie_options[catapult_cookie_link_settings]" size="50" type="text" value="' . esc_attr( $value ) . '" />';
 }
 
 function catapult_cookie_options_validate($input) {
