@@ -3,8 +3,8 @@ Contributors: catapult, husobj
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M2FLCU6Z4A2LA
 Tags: cookies, eu, cookie law, implied consent, uk cookie consent
 Requires at least: 3.5.0
-Tested up to: 3.7.1
-Stable tag: 1.7
+Tested up to: 3.8
+Stable tag: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,9 @@ You will find more details of the regulations on the [Information Commissioner's
 1. Simple settings page allows you to modify the message and button text.
 
 == Changelog ==
+
+= 1.7.1 =
+* Ready for WP 3.8
 
 = 1.7 =
 * Updates to settings page
