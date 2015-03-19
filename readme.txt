@@ -1,10 +1,10 @@
 === Plugin Name ===
-Contributors: catapult
+Contributors: catapult, husobj
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M2FLCU6Z4A2LA
 Tags: cookies, eu, cookie law, implied consent, uk cookie consent
-Requires at least: 3.3.2
-Tested up to: 3.4.1
-Stable tag: 1.31
+Requires at least: 3.5.0
+Tested up to: 3.5.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,23 @@ You will find more details of the regulations on the [Information Commissioner's
 1. Simple settings page allows you to modify the message and button text.
 
 == Changelog ==
+
+= 1.5 =
+Switched the logic so that the bar is initially hidden on the page and only displays if user has not previously dismissed it.
+Gives a slightly better performance.
+Thanks to chrisHe for the suggestion.
+
+= 1.4.2. =
+Policy page created on register_activation_hook now
+
+= 1.4.1 =
+Tweak to ensure jQuery is a dependency
+
+= 1.4 =
+This plug-in now uses JavaScript to test whether the user has dismissed the front-end notification in order to solve issues with caching plug-ins.
+Added configuration options for colour and position of bar.
+Set notification button and link to first element in tab list.
+Thanks to husobj for contributions and suggestions including localisation and enqueueing scripts and stylesheets
 
 = 1.3 =
 Reinstated user-defined permalink field
