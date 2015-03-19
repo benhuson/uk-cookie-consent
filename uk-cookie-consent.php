@@ -329,12 +329,15 @@ function catapult_add_cookie_css() {
 }
 add_action ( 'wp_head', 'catapult_add_cookie_css' );
 
-function catapult_add_cookie_js() { ?>
+function catapult_add_cookie_js() { 
+	$options = get_option( 'catapult_cookie_options' ); ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
 			if(!catapultReadCookie("catAccCookies")){//If the cookie has not been set
 				jQuery("#catapult-cookie-bar").show();
-				jQuery("html").css("margin-top","30px");
+				<?php if ( $options['catapult_cookie_bar_position_settings'] == 'top' ) { ?>
+					jQuery("html").css("margin-top","30px");
+				<?php } ?>
 			}
 		});
 	</script>
