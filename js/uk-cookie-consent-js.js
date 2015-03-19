@@ -13,7 +13,7 @@ function catapultReadCookie(cookieName) {
 	if (ind==-1 || cookieName=="") return "";
 	var ind1=theCookie.indexOf(";",ind+1);
 	if (ind1==-1) ind1=theCookie.length; 
-	return unescape(theCookie.substring(ind+cookieName.length+2,ind1));
+	return UKCookieConsent.version == unescape(theCookie.substring(ind+cookieName.length+2,ind1));
 }
 function catapultDeleteCookie(cookieName) {
 	var today = new Date();
@@ -22,7 +22,7 @@ function catapultDeleteCookie(cookieName) {
 	document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
 }
 function catapultAcceptCookies() {
-	catapultSetCookie('catAccCookies', true, 30);
+	catapultSetCookie('catAccCookies', UKCookieConsent.version, 30);
 	jQuery("#catapult-cookie-bar").hide();
 	jQuery("html").css("margin-top","0");
 }
