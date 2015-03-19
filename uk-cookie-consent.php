@@ -262,7 +262,8 @@ function catapult_cookie_jquery() {
     wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'uk-cookie-consent-js', plugins_url ( 'js/uk-cookie-consent-js.js', __FILE__ ), array ( 'jquery' ), '1.8', true );
 	wp_localize_script( 'uk-cookie-consent-js', 'UKCookieConsent', array(
-		'version' => esc_js( sanitize_text_field( apply_filters( 'catapult_cookie_version', true ) ) )
+		'version'  => esc_js( sanitize_text_field( apply_filters( 'catapult_cookie_version', true ) ) ),
+		'duration' => floatval( apply_filters( 'catapult_cookie_duration', 30 ) )
 	) );
 }
 add_action('wp_enqueue_scripts', 'catapult_cookie_jquery');

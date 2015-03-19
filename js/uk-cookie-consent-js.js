@@ -22,7 +22,7 @@ function catapultDeleteCookie(cookieName) {
 	document.cookie = cookieName+"="+escape(cookieValue)+ ";expires="+expire.toGMTString();
 }
 function catapultAcceptCookies() {
-	catapultSetCookie('catAccCookies', UKCookieConsent.version, 30);
+	catapultSetCookie('catAccCookies', UKCookieConsent.version, UKCookieConsent.duration);
 	jQuery("#catapult-cookie-bar").hide();
 	jQuery("html").css("margin-top","0");
 }
