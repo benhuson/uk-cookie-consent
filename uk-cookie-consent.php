@@ -4,7 +4,7 @@ Plugin Name: UK Cookie Consent
 Plugin URI: http://catapultdesign.co.uk/plugin/uk-cookie-consent/
 Description: Simple plug-in to help compliance with the UK interpretation of the EU regulations regarding usage of website cookies. A user to your site is presented with a clear yet unobtrusive notification that the site is using cookies and may then acknowledge and dismiss the notification or click to find out more. The plug-in does not disable cookies on your site or prevent the user from continuing to browse the site - it comes with standard wording on what cookies are and advice on how to disable them in the browser. The plug-in follows the notion of "implied consent" as described by the UK's Information Commissioner and makes the assumption that most users who choose not to accept cookies will do so for all websites.
 Author: Catapult
-Version: 1.5
+Version: 1.6
 Author URI: http://catapultdesign.co.uk/
 */
 
@@ -268,14 +268,14 @@ add_action ( 'wp_head', 'catapult_add_cookie_css' );
 function catapult_add_cookie_js() { ?>
 	<script type="text/javascript">
 		jQuery(document).ready(function(){
-			if(!catapultReadCookie("catAccCookies")){//If the cookie has been set
+			if(!catapultReadCookie("catAccCookies")){//If the cookie has not been set
 				jQuery("#catapult-cookie-bar").show();
 				jQuery("html").css("margin-top","0");
 			}
 		});
 	</script>
 <?php }
-add_action ( 'wp_head', 'catapult_add_cookie_js' );
+add_action ( 'wp_footer', 'catapult_add_cookie_js' );
 
 //Add the notification bar
 function catapult_add_cookie_bar() {
