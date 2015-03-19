@@ -4,7 +4,7 @@ Plugin Name: UK Cookie Consent
 Plugin URI: http://catapultdesign.co.uk/plugin/uk-cookie-consent/
 Description: Simple plug-in to help compliance with the UK interpretation of the EU regulations regarding usage of website cookies. A user to your site is presented with a clear yet unobtrusive notification that the site is using cookies and may then acknowledge and dismiss the notification or click to find out more. The plug-in does not disable cookies on your site or prevent the user from continuing to browse the site - it comes with standard wording on what cookies are and advice on how to disable them in the browser. The plug-in follows the notion of "implied consent" as described by the UK's Information Commissioner and makes the assumption that most users who choose not to accept cookies will do so for all websites.
 Author: Catapult
-Version: 1.7.1
+Version: 1.8
 Author URI: http://catapultdesign.co.uk/
 */
 
@@ -260,7 +260,7 @@ add_action( 'admin_enqueue_scripts', 'catapult_color_picker' );
 //Enqueue jquery
 function catapult_cookie_jquery() {
     wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'uk-cookie-consent-js', plugins_url ( 'js/uk-cookie-consent-js.js', __FILE__ ), array ( 'jquery' ) );
+	wp_enqueue_script( 'uk-cookie-consent-js', plugins_url ( 'js/uk-cookie-consent-js.js', __FILE__ ), array ( 'jquery' ), '1.8', true );
 }
 add_action('wp_enqueue_scripts', 'catapult_cookie_jquery');
 
@@ -334,7 +334,7 @@ function catapult_add_cookie_js() { ?>
 		jQuery(document).ready(function(){
 			if(!catapultReadCookie("catAccCookies")){//If the cookie has not been set
 				jQuery("#catapult-cookie-bar").show();
-				jQuery("html").css("margin-top","0");
+				jQuery("html").css("margin-top","30px");
 			}
 		});
 	</script>
@@ -347,17 +347,17 @@ function catapult_add_cookie_bar() {
 	if ( $options['catapult_cookie_text_settings'] ) {
 		$current_text = $options['catapult_cookie_text_settings'];
 	} else {
-		$current_text = "This site uses cookies";
+		$current_text = __( "This site uses cookies" );
 	}
 	if ( $options['catapult_cookie_accept_settings'] ) {
 		$accept_text = $options['catapult_cookie_accept_settings'];
 	} else {
-		$accept_text = "Okay, thanks";
+		$accept_text = __( "Okay, thanks" );
 	}
 	if ( $options['catapult_cookie_more_settings'] ) {
 		$more_text = $options['catapult_cookie_more_settings'];
 	} else {
-		$more_text = "Find out more";
+		$more_text = __( "Find out more" );
 	}
 	if ( $options['catapult_cookie_link_settings'] ) {
 		$link_text = strtolower ( $options['catapult_cookie_link_settings'] );
