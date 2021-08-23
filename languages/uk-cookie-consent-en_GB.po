@@ -1,19 +1,21 @@
-# Copyright (C) 2016 Cookie Consent
-# This file is distributed under the same license as the Cookie Consent package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cookie Consent 2.0.3\n"
+"Project-Id-Version: Cookie Consent 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/uk-cookie-"
 "consent\n"
-"POT-Creation-Date: 2016-01-12 23:15:34+00:00\n"
+"POT-Creation-Date: 2016-01-13 00:18+0100\n"
+"PO-Revision-Date: 2016-01-13 00:18+0100\n"
+"Last-Translator: Jędrzej Raczyński <jedrzejraczynski@gmail.com>\n"
+"Language-Team: Catapult_Themes <info@catapultthemes.com>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;_e;_n;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#. #-#-#-#-#  uk-cookie-consent.pot (Cookie Consent 2.0.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/class-ctcc-admin.php:56 admin/class-ctcc-admin.php:630
 #: public/customizer.php:17

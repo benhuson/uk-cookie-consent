@@ -5,199 +5,209 @@ msgstr ""
 "Project-Id-Version: Cookie Consent 2.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/uk-cookie-"
 "consent\n"
-"POT-Creation-Date: 2016-01-12 23:15:34+00:00\n"
+"POT-Creation-Date: 2016-01-27 12:42+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-01-27 14:13+0100\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: sk_SK\n"
 
-#. #-#-#-#-#  uk-cookie-consent.pot (Cookie Consent 2.0.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/class-ctcc-admin.php:56 admin/class-ctcc-admin.php:630
 #: public/customizer.php:17
 msgid "Cookie Consent"
-msgstr ""
+msgstr "Cookie Consent"
 
 #: admin/class-ctcc-admin.php:65
 msgid "General settings"
-msgstr ""
+msgstr "Hlavné nastavenia"
 
 #: admin/class-ctcc-admin.php:72
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
 
 #: admin/class-ctcc-admin.php:80
 msgid "First Page Only"
-msgstr ""
+msgstr "Iba na prvej strane"
 
 #: admin/class-ctcc-admin.php:88
 msgid "Notification Duration"
-msgstr ""
+msgstr "Dĺžka zobrazenia"
 
 #: admin/class-ctcc-admin.php:96
 msgid "Cookie Expiry"
-msgstr ""
+msgstr "Čas vypršania Cookie "
 
 #: admin/class-ctcc-admin.php:104
 msgid "Cookie Version"
-msgstr ""
+msgstr "Verzia Cookie"
 
 #: admin/class-ctcc-admin.php:126
 msgid "Content settings"
-msgstr ""
+msgstr "Nastavenia obsahu"
 
 #: admin/class-ctcc-admin.php:133
 msgid "Heading Text"
-msgstr ""
+msgstr "Text hlavičky"
 
 #: admin/class-ctcc-admin.php:141
 msgid "Notification Text"
-msgstr ""
+msgstr "Text oznámenia"
 
 #: admin/class-ctcc-admin.php:149
 msgid "More Info Text"
-msgstr ""
+msgstr "Text \"Viac informácií\""
 
 #: admin/class-ctcc-admin.php:157
 msgid "More Info Page"
-msgstr ""
+msgstr "Stránka s viac informáciami"
 
 #: admin/class-ctcc-admin.php:165
 msgid "More Info URL"
-msgstr ""
+msgstr "URL s viac informáciami"
 
 #: admin/class-ctcc-admin.php:173
 msgid "More Info Target"
-msgstr ""
+msgstr "Cieľ pre viac informácií"
 
 #: admin/class-ctcc-admin.php:181
 msgid "Accept Text"
-msgstr ""
+msgstr "Text \"Akceptovať\""
 
 #: admin/class-ctcc-admin.php:203
 msgid "Styles settings"
-msgstr ""
+msgstr "Nastavenia štýlov"
 
 #: admin/class-ctcc-admin.php:210 public/customizer.php:34
 msgid "Position"
-msgstr ""
+msgstr "Umiestnenie"
 
 #: admin/class-ctcc-admin.php:218 public/customizer.php:58
 msgid "Container Class"
-msgstr ""
+msgstr "Container Class"
 
 #: admin/class-ctcc-admin.php:226
 msgid "Include Stylesheet"
-msgstr ""
+msgstr "Použiť CSS štýl"
 
 #: admin/class-ctcc-admin.php:234 public/customizer.php:90
 msgid "Rounded Corners"
-msgstr ""
+msgstr "Okrúhle rohy"
 
 #: admin/class-ctcc-admin.php:242 public/customizer.php:106
 msgid "Drop Shadow"
-msgstr ""
+msgstr "Vytvoriť tieň"
 
 #: admin/class-ctcc-admin.php:250 public/customizer.php:122
 msgid "Display Button With Text"
-msgstr ""
+msgstr "Zobraziť tlačítko s textom"
 
 #: admin/class-ctcc-admin.php:258 public/customizer.php:138
 msgid "Use X Close"
-msgstr ""
+msgstr "Použiť zatvorenie pomocou \"X\""
 
 #: admin/class-ctcc-admin.php:266 public/customizer.php:154
 msgid "Text Color"
-msgstr ""
+msgstr "Farba textu"
 
 #: admin/class-ctcc-admin.php:274 admin/class-ctcc-admin.php:306
 #: public/customizer.php:170
 msgid "Background Color"
-msgstr ""
+msgstr "Farba pozadia"
 
 #: admin/class-ctcc-admin.php:282 public/customizer.php:186
 msgid "Link Color"
-msgstr ""
+msgstr "Farba odkazu"
 
 #: admin/class-ctcc-admin.php:290 public/customizer.php:202
 msgid "Button Color"
-msgstr ""
+msgstr "Farba tlačítka"
 
 #: admin/class-ctcc-admin.php:298 public/customizer.php:218
 msgid "Button Background"
-msgstr ""
+msgstr "Pozadie tlačítka"
 
 #: admin/class-ctcc-admin.php:339 admin/class-ctcc-admin.php:349
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #: admin/class-ctcc-admin.php:350
 msgid "This site uses cookies: "
-msgstr ""
+msgstr "Táto stránka používa cookies:"
 
 #: admin/class-ctcc-admin.php:351
 msgid "Okay, thanks"
-msgstr ""
+msgstr "Dobre"
 
 #: admin/class-ctcc-admin.php:352
 msgid "Find out more."
-msgstr ""
+msgstr "Zistiť viac."
 
 #: admin/class-ctcc-admin.php:411
 msgid "On Click"
-msgstr ""
+msgstr "Po kliknutí"
 
 #: admin/class-ctcc-admin.php:412
 msgid "Timed"
-msgstr ""
+msgstr "Po čase"
 
 #: admin/class-ctcc-admin.php:414
 msgid "How you want the user to close the notification"
-msgstr ""
+msgstr "Ako si želáte, aby používateľ zatvoril notifikáciu o cookies"
 
 #: admin/class-ctcc-admin.php:421
 msgid ""
 "Select this to show the notification only on the first page the user visits"
 msgstr ""
+"Zvoľte túto možnosť, aby sa notifikácia zobrazovala iba na prvej stránke, "
+"ktorú návštevník otvorí"
 
 #: admin/class-ctcc-admin.php:428
 msgid ""
 "If you chose Timer as the close method, enter how many seconds the "
 "notification should display for"
 msgstr ""
+"Ak ste zvolili \"Po čase\" ako metódu zatvorenia notifikácie, sem vložte čas "
+"v sekundách po koľkých má byť notifikácia zatvorená"
 
 #: admin/class-ctcc-admin.php:435
 msgid "The number of days that the cookie is set for"
-msgstr ""
+msgstr "Počet dní, kým cookie vyprší"
 
 #: admin/class-ctcc-admin.php:442
 msgid ""
 "A version number for the cookie - update this to invalidate the cookie and "
 "force all users to view the notification again"
 msgstr ""
+"Verzia cookie - zmeňte toto číslo, aby sa znova všetkým používateľom "
+"zobrazila notifikácia"
 
 #: admin/class-ctcc-admin.php:453
 msgid ""
 "The heading text - only applies if you are not using a top or bottom bar"
 msgstr ""
+"Text hlavičky - týka sa iba prípadov, keď nie je použítý horný alebo spodný "
+"riadok na zobrazenie notifikácie"
 
 #: admin/class-ctcc-admin.php:460
 msgid "The default text to indicate that your site uses cookies"
-msgstr ""
+msgstr "PRedvolený text na informovanie, že stránka používa cookies"
 
 #: admin/class-ctcc-admin.php:467
 msgid "The default text to dismiss the notification"
-msgstr ""
+msgstr "Predvolený text na zatvorenie notifikácie"
 
 #: admin/class-ctcc-admin.php:474
 msgid "The default text to use to link to a page providing further information"
-msgstr ""
+msgstr "Predvolený text na odkaz na stránku s viac informáciami"
 
 #: admin/class-ctcc-admin.php:490
 msgid "The page containing further information about your cookie policy"
-msgstr ""
+msgstr "Stránka obsahujúca viac informácií o pravidlácha použitia cookies"
 
 #: admin/class-ctcc-admin.php:497
 msgid ""
@@ -205,177 +215,183 @@ msgid ""
 "above. Use this to link to an external website for further information about "
 "cookies."
 msgstr ""
+"Tu môžete vložiť absolútnu URL na prepísanie stránky s viac informáciami "
+"uvedenej vyššie. Používajte v prípade, že chcete návšetevníkov odkáazať na "
+"externú stránku"
 
 #: admin/class-ctcc-admin.php:504
 msgid "New Tab"
-msgstr ""
+msgstr "Nová záložka"
 
 #: admin/class-ctcc-admin.php:505
 msgid "Same Tab"
-msgstr ""
+msgstr "Tá istá záložka"
 
 #: admin/class-ctcc-admin.php:507
 msgid "Open the More Information page in the same or new tab."
-msgstr ""
+msgstr "Otvoriť viac informácií v novej alebo tej istej záložke"
 
 #: admin/class-ctcc-admin.php:518 public/customizer.php:36
 msgid "Top Bar"
-msgstr ""
+msgstr "Horný panel"
 
 #: admin/class-ctcc-admin.php:519 public/customizer.php:37
 msgid "Bottom Bar"
-msgstr ""
+msgstr "Dolný panel"
 
 #: admin/class-ctcc-admin.php:520 public/customizer.php:38
 msgid "Top Left Block"
-msgstr ""
+msgstr "Ľavý horný blok"
 
 #: admin/class-ctcc-admin.php:521 public/customizer.php:39
 msgid "Top Right Block"
-msgstr ""
+msgstr "Pravý horný blok"
 
 #: admin/class-ctcc-admin.php:522 public/customizer.php:40
 msgid "Bottom Left Block"
-msgstr ""
+msgstr "Ľavý spodný blok"
 
 #: admin/class-ctcc-admin.php:523 public/customizer.php:41
 msgid "Bottom Right Block"
-msgstr ""
+msgstr "Pravý spodný blok"
 
 #: admin/class-ctcc-admin.php:525
 msgid "Where the notification should appear"
-msgstr ""
+msgstr "Kde má byť notifikácia zobrazená"
 
 #: admin/class-ctcc-admin.php:532
 msgid ""
 "You can add an optional wrapper class, eg container, here to align the "
 "notification text with the rest of your content"
 msgstr ""
+"Tu môžete vložiť triedu, napr. container, aby bola notifikácia správne "
+"zarovnaná so zvyškom obsahu"
 
 #: admin/class-ctcc-admin.php:539
 msgid "Deselect this to dequeue the plugin stylesheet"
-msgstr ""
+msgstr "Odškrtnite toto políčko, aby bol zrušený štýl z modulu"
 
 #: admin/class-ctcc-admin.php:546
 msgid "Round the corners on the block (doesn't apply to the top or bottom bar)"
-msgstr ""
+msgstr "Zaobliť rohy bloku (netýka sa horného a spodného riadku)"
 
 #: admin/class-ctcc-admin.php:553
 msgid "Add drop shadow to the block (doesn't apply to the top or bottom bar)"
-msgstr ""
+msgstr "Pridať tieň pod blok (netýka sa horného a spodného riadku)"
 
 #: admin/class-ctcc-admin.php:560
 msgid "Display the confirmation button with notification text"
-msgstr ""
+msgstr "Zobraziť tlačítko na zatvorenie s textom"
 
 #: admin/class-ctcc-admin.php:567
 msgid "Remove confirmation button and use 'X' icon instead"
-msgstr ""
+msgstr "Zrušiť tlačítko na potvrdenie a zatvárať pomocou \"X\""
 
 #: admin/class-ctcc-admin.php:574
 msgid "The text color on the notification"
-msgstr ""
+msgstr "Farba textu notifikácie"
 
 #: admin/class-ctcc-admin.php:581
 msgid "The background color for the notification"
-msgstr ""
+msgstr "Farba pozadia notifikácie"
 
 #: admin/class-ctcc-admin.php:588
 msgid "The link color on the notification"
-msgstr ""
+msgstr "Farba odkazu notifikácie"
 
 #: admin/class-ctcc-admin.php:595
 msgid "The text color on the notification button"
-msgstr ""
+msgstr "Farba textu tlačítka"
 
 #: admin/class-ctcc-admin.php:602
 msgid "The background color on the notification button"
-msgstr ""
+msgstr "Farba pozadia tlačítka"
 
 #: admin/class-ctcc-admin.php:607
 msgid "<p>Basic settings</p>"
-msgstr ""
+msgstr "<p>Základné nastavenia</p>"
 
 #: admin/class-ctcc-admin.php:611
 msgid "<p>Update the content displayed to the user</p>"
-msgstr ""
+msgstr "<p>Upraviť obsah zobrazený používateľovi</p>"
 
 #: admin/class-ctcc-admin.php:615
 msgid ""
 "<p>Change the styles here if you like - but it's better in the Customizer</p>"
 msgstr ""
+"<p>Tu môžete zmeniť stýly ak chcete, ale je lepšie zvoliť Editor štýlov</p>"
 
 #: admin/class-ctcc-admin.php:632
 msgid "General"
-msgstr ""
+msgstr "Hlavné"
 
 #: admin/class-ctcc-admin.php:633
 msgid "Content"
-msgstr ""
+msgstr "Obsah"
 
 #: admin/class-ctcc-admin.php:634
 msgid "Styles"
-msgstr ""
+msgstr "Štýly"
 
 #: admin/class-ctcc-admin.php:656
 msgid "Reset plugin defaults"
-msgstr ""
+msgstr "Resetovať na predvolené nastavenia"
 
 #: public/customizer.php:43
 msgid "Position and placement."
-msgstr ""
+msgstr "Umiestnenie."
 
 #: public/customizer.php:59
 msgid "Optional wrapper class."
-msgstr ""
+msgstr "Voliteľná wrapper class."
 
 #: public/customizer.php:74
 msgid "Enqueue Styles"
-msgstr ""
+msgstr "Pripojiť štýly"
 
 #: public/customizer.php:75
 msgid "Deselect this to dequeue the plugin stylesheet."
-msgstr ""
+msgstr "Odznačte toto políčko pre vyradenie predvolených štýlov modulu"
 
 #: public/customizer.php:91
 msgid "Round the corners on the block."
-msgstr ""
+msgstr "Oválne rohy bloku"
 
 #: public/customizer.php:107
 msgid "Add drop shadow to the block."
-msgstr ""
+msgstr "Pridať tieň bloku"
 
 #: public/customizer.php:123
 msgid "Deselect to float button to right."
-msgstr ""
+msgstr "Odškrtnite pre zarovnanie tlačítka doprava"
 
 #: public/customizer.php:139
 msgid "Replace confirmation button with 'X' icon."
-msgstr ""
+msgstr "Zameniť tlačítko za \"X\""
 
 #: public/customizer.php:155
 msgid "Text color for your notification bar."
-msgstr ""
+msgstr "Farba textu notifikačného panelu"
 
 #: public/customizer.php:171
 msgid "Background color for your notification bar."
-msgstr ""
+msgstr "Farba pozadia notifikačného panelu"
 
 #: public/customizer.php:187
 msgid "Link color for your notification bar."
-msgstr ""
+msgstr "Farba odkazu notifikačného panelu"
 
 #: public/customizer.php:203
 msgid "Text color for your notification bar button."
-msgstr ""
+msgstr "Farba textu tlačítka"
 
 #: public/customizer.php:219
 msgid "Background color for your notification bar button."
-msgstr ""
+msgstr "Farba pozadia tlačítka"
 
 #: uk-cookie-consent.php:54
 msgid "Cookie Policy"
-msgstr ""
+msgstr "Pravidlá použitia Cookies"
 
 #: uk-cookie-consent.php:55
 msgid ""
@@ -390,19 +406,31 @@ msgid ""
 "look at <a href=\"http://www.aboutcookies.org\">the About Cookies website</"
 "a> which offers guidance for all modern browsers"
 msgstr ""
+"Táto stránka používa cookies - malé textové súbory, ktoré sú uložené na "
+"Vašom počítači, aby pomohli stránke zlepšiť užívateľský komfort. Cookies sú "
+"všeobecne používané na uloženie nastavení používateľa a informácií ako napr. "
+"obsah nákupného vozíka alebo anonymné zbieranie informácií pre tretie strany "
+"ako Google Analytics. Je pravidlom, že cookies zlepšia komfort prezerania "
+"stránok. Napriek tomu ale môžete uprednostniť zakázanie cookies na tejto "
+"alebo iných stránkach. Najjednoduchšia možnosť je zakázať cookies vo Vašom "
+"prehliadači. Odporúčame postupovať pomocou Nápovedy Vašeho webového "
+"prehliadača, prípadne <a href=\"http://www.aboutcookies.org\">stránky "
+"venovanej cookies</a>, ktorá obsahuje návody pre všetky moderné prehliadače."
 
 #. Plugin URI of the plugin/theme
 msgid "http://catapultthemes.com/cookie-consent/"
-msgstr ""
+msgstr "http://catapultthemes.com/cookie-consent/"
 
 #. Description of the plugin/theme
 msgid "The only cookie consent plugin you'll ever need."
 msgstr ""
+"Jediný plugin na informovanie o použití cookies, ktorý kedy budete "
+"potrebovať."
 
 #. Author of the plugin/theme
 msgid "Catapult_Themes"
-msgstr ""
+msgstr "Catapult_Themes"
 
 #. Author URI of the plugin/theme
 msgid "http://catapultthemes.com/"
-msgstr ""
+msgstr "http://catapultthemes.com/"
